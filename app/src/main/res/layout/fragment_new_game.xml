@@ -1,42 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             android:orientation="vertical"
-             android:layout_gravity="center"
-             tools:context=".Fragments.NewGameFragment">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context=".Fragments.NewGameFragment">
 
     <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="30dp"
-            android:orientation="vertical">
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/small_gap"
+            android:layout_weight="1">
 
-        <EditText
-                android:id="@+id/txtName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:imeOptions="actionNext"
-                android:hint="Name"/>
+        <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/medium_gap"
+                android:layout_weight="1"
+                android:orientation="vertical">
 
-        <EditText
-                android:id="@+id/txtEditorial"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:imeOptions="actionDone"
-                android:hint="Editorial"/>
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/text_team_a"
+                    android:textStyle="bold" />
+
+            <TextView
+                    android:id="@+id/tv_score_team_a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/small_gap"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="@dimen/big_text" />
 
 
-        <Button
-                android:id="@+id/save_game"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Save Book"/>
+            <Button
+                    android:id="@+id/bt_team_a_3_p"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/small_gap"
+                    android:text="@string/action_3_points" />
+
+            <Button
+                    android:id="@+id/bt_team_a_2_p"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/small_gap"
+                    android:text="@string/action_2_points" />
+
+            <Button
+                    android:id="@+id/bt_team_a_free_throw"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/small_gap"
+                    android:text="@string/action_free_throw" />
+
+        </LinearLayout>
+
+        <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/medium_gap"
+                android:layout_marginTop="@dimen/medium_gap"
+                android:layout_marginRight="@dimen/medium_gap"
+                android:background="#D8D4D4" />
+
+        <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/medium_gap"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/text_team_b"
+                    android:textStyle="bold" />
+
+            <TextView
+                    android:id="@+id/tv_score_team_b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/small_gap"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="@dimen/big_text" />
+
+            <Button
+                    android:id="@+id/bt_team_b_3_p"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/small_gap"
+                    android:text="@string/action_3_points" />
+
+            <Button
+                    android:id="@+id/bt_team_b_2_p"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/small_gap"
+                    android:text="@string/action_2_points" />
+
+            <Button
+                    android:id="@+id/bt_team_b_free_throw"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/small_gap"
+                    android:text="@string/action_free_throw" />
+
+        </LinearLayout>
 
     </LinearLayout>
 
+    <Button
+            android:id="@+id/bt_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/medium_gap"
+            android:layout_marginBottom="@dimen/medium_gap"
+            android:text="@string/action_reset" />
 
-</FrameLayout>
+</LinearLayout>
