@@ -3,4 +3,6 @@
     <string name="action_settings">Settings</string>
     <string name="default_subtitle">12/05/2015</string>
     <string name="default_title">Team A 0 - 2 Team B</string>
+    <string name="new_game">Nuevo Juego</string>
+    <string name="resume_game">Resumen de juego</string>
 </resources>

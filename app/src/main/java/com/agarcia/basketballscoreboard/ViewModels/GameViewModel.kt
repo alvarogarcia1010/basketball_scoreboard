@@ -10,15 +10,15 @@ import com.agarcia.basketballscoreboard.Room.ScoreboardDB
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class ViewModel(app: Application): AndroidViewModel(app) {
+class GameViewModel(app: Application): AndroidViewModel(app) {
 
     private val gameRepository: GameRepository
-    val allBooks: LiveData<List<Game>>
+    val allGames: LiveData<List<Game>>
 
     init {
         val gameDao = ScoreboardDB.getDatabase(app, viewModelScope).gameDao()
         gameRepository = GameRepository(gameDao)
-        allBooks = gameRepository.getAllGames()
+        allGames = gameRepository.getAllGames()
     }
 
     fun insertBook(game: Game) = viewModelScope.launch(Dispatchers.IO){

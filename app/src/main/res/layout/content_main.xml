@@ -9,12 +9,11 @@
         tools:showIn="@layout/activity_main"
         tools:context=".MainActivity">
 
-    <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerview"
+    <fragment
+            android:id="@+id/nav_host_fragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@android:color/darker_gray"
-            tools:listitem="@layout/game_item" tools:layout_editor_absoluteY="-277dp"
-            tools:layout_editor_absoluteX="-37dp"/>
-
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            app:navGraph="@navigation/navigation_graph"
+            app:defaultNavHost="true" tools:ignore="MissingConstraints"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

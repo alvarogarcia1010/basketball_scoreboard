@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/navigation_graph"
+            app:startDestination="@id/gameListFragment" tools:ignore="UnusedNavigation">
+
+    <fragment android:id="@+id/gameListFragment"
+              android:name="com.agarcia.basketballscoreboard.Fragments.GameListFragment"
+              android:label="BascketballScoreboard"
+              tools:layout="@layout/fragment_list_game">
+        <action android:id="@+id/next_action" app:destination="@id/gameFragment"/>
+        <action android:id="@+id/new_action" app:destination="@id/newGameFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/gameFragment"
+              android:name="com.agarcia.basketballscoreboard.Fragments.GameFragment"
+              android:label="@string/resume_game"
+              tools:layout="@layout/fragment_game_detail">
+        <argument android:name="teamA" app:argType="string"/>
+        <argument android:name="TeamB" app:argType="string"/>
+    </fragment>
+
+    <fragment android:id="@+id/newGameFragment"
+              android:name="com.agarcia.basketballscoreboard.Fragments.NewGameFragment"
+              android:label="@string/new_game"
+              tools:layout="@layout/fragment_new_game"/>
+</navigation>
