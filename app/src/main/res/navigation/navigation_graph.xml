@@ -17,8 +17,13 @@
               android:name="com.agarcia.basketballscoreboard.Fragments.GameFragment"
               android:label="@string/resume_game"
               tools:layout="@layout/fragment_game_detail">
+        <argument android:name="date" app:argType="string"/>
+        <argument android:name="time" app:argType="string"/>
         <argument android:name="teamA" app:argType="string"/>
-        <argument android:name="TeamB" app:argType="string"/>
+        <argument android:name="teamB" app:argType="string"/>
+        <argument android:name="scoreA" app:argType="integer"/>
+        <argument android:name="scoreB" app:argType="integer"/>
+        <argument android:name="winner" app:argType="string"/>
     </fragment>
 
     <fragment android:id="@+id/newGameFragment"

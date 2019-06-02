@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -34,7 +35,8 @@ class GameListFragment : Fragment() {
         var adapter = object : GameAdapter(view.context){
             override fun setClickListenerToGame(holder: ViewHolder, item: Game) {
                 holder.itemView.setOnClickListener {
-                    val nextAction = GameListFragmentDirections.nextAction(item.teamA, item.teamB)
+                    val nextAction = GameListFragmentDirections.nextAction(item.date, item.time, item.teamA, item.teamB, item.scoreA, item.scoreB,  item.winner)
+
                     Navigation.findNavController(it).navigate(nextAction)
                 }
             }

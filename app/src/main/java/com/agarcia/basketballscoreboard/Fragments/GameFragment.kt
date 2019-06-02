@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.agarcia.basketballscoreboard.R
+import kotlinx.android.synthetic.main.fragment_game_detail.*
 
 class GameFragment : Fragment() {
 
@@ -15,16 +16,18 @@ class GameFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        /*
+
         arguments?.let {
-            val safeArgs = BookFragmentArgs.fromBundle(it)
-            name.text = safeArgs.name
-            editorial.text = safeArgs.editorial
-            favorite.text = safeArgs.favorite.toString()
+            val safeArgs = GameFragmentArgs.fromBundle(it)
+            tv_date.text = safeArgs.date
+            tv_time.text = safeArgs.time
+            tv_team_a.text = safeArgs.teamA
+            tv_team_b.text = safeArgs.teamB
+            tv_winner.text = "Ganador: ${safeArgs.winner}"
+            tv_score_team_a.text = safeArgs.scoreA.toString()
+            tv_score_team_b.text = safeArgs.scoreB.toString()
         }
-        */
 
     }
-
 
 }
