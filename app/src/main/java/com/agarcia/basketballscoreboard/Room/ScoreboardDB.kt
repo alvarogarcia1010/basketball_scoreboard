@@ -50,13 +50,15 @@ public abstract class ScoreboardDB : RoomDatabase()
         }
 
         suspend fun populateDatabase(gameDao: GameDao) {
-            gameDao.deleteAllGames()
 
-            var game = Game("Team A", 10, "Team B", 20, "1/06/2019", "12:45pm", "Team B",0)
-            gameDao.insert(game)
+            if(gameDao.getGamesList().isEmpty()){
+                var game = Game("Team A", 10, "Team B", 20, "1/06/2019", "12:45pm", "Team B",0)
+                gameDao.insert(game)
 
-            game = Game("Team C", 25, "Team D", 12, "02/06/2019", "3:45pm", "Team C",0)
-            gameDao.insert(game)
+                game = Game("Team C", 25, "Team D", 12, "02/06/2019", "3:45pm", "Team C",0)
+                gameDao.insert(game)
+            }
+
         }
     }
 }

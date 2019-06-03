@@ -17,6 +17,9 @@ interface GameDao {
     @Query("SELECT * FROM ${Constants.GameTableName} ORDER BY id ASC")
     fun getAllGames(): LiveData<List<Game>>
 
+    @Query("SELECT * FROM ${Constants.GameTableName} ORDER BY id ASC")
+    fun getGamesList(): List<Game>
+
     @Query("DELETE from ${Constants.GameTableName}")
     fun deleteAllGames()
 

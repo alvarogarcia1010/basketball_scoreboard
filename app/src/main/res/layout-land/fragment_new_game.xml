@@ -12,34 +12,45 @@
             android:layout_height="match_parent">
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
                       android:orientation="vertical">
-            <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="En juego..."
-                    android:textStyle="bold"
-                    android:textSize="@dimen/title_size"
-                    android:layout_margin="@dimen/big_padding"/>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal">
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="En juego..."
+                        android:textStyle="bold"
+                        android:textSize="@dimen/title_size"
+                      />
 
 
-            <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/tv_date"
-                    android:text="@string/default_subtitle"
-                    android:layout_gravity="center"
-                    android:textSize="@dimen/subtitle_size"
-                    android:layout_margin="@dimen/big_padding"/>
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_date"
+                        android:text="@string/default_subtitle"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="@dimen/subtitle_size"
+                        />
 
 
-            <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/tv_time"
-                    android:text="15:45 pm"
-                    android:layout_gravity="center"
-                    android:textSize="@dimen/subtitle_size"
-                    android:layout_marginBottom="@dimen/big_padding"/>
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_time"
+                        android:text="15:45 pm"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/subtitle_size"
+                     />
+            </LinearLayout>
+
             <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
@@ -73,20 +84,25 @@
                             android:text="0"
                             android:textSize="@dimen/big_text"/>
 
+                    <LinearLayout android:layout_width="match_parent"
+                                  android:layout_height="wrap_content">
+                        <Button
+                                android:id="@+id/bt_team_a_3_p"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/small_gap"
+                                android:text="@string/action_3_points"/>
 
-                    <Button
-                            android:id="@+id/bt_team_a_3_p"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/small_gap"
-                            android:text="@string/action_3_points"/>
+                        <Button
+                                android:id="@+id/bt_team_a_2_p"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/small_gap"
+                                android:text="@string/action_2_points"/>
+                    </LinearLayout>
 
-                    <Button
-                            android:id="@+id/bt_team_a_2_p"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/small_gap"
-                            android:text="@string/action_2_points"/>
 
                     <Button
                             android:id="@+id/bt_team_a_free_throw"
@@ -131,19 +147,24 @@
                             android:text="0"
                             android:textSize="@dimen/big_text"/>
 
-                    <Button
-                            android:id="@+id/bt_team_b_3_p"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/small_gap"
-                            android:text="@string/action_3_points"/>
+                    <LinearLayout android:layout_width="match_parent"
+                                  android:layout_height="wrap_content">
+                        <Button
+                                android:id="@+id/bt_team_b_3_p"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/small_gap"
+                                android:text="@string/action_3_points"/>
 
-                    <Button
-                            android:id="@+id/bt_team_b_2_p"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/small_gap"
-                            android:text="@string/action_2_points"/>
+                        <Button
+                                android:id="@+id/bt_team_b_2_p"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/small_gap"
+                                android:text="@string/action_2_points"/>
+                    </LinearLayout>
 
                     <Button
                             android:id="@+id/bt_team_b_free_throw"
@@ -156,23 +177,28 @@
 
             </LinearLayout>
 
-            <Button
-                    android:id="@+id/bt_reset"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="@dimen/medium_gap"
-                    android:layout_marginBottom="@dimen/medium_gap"
-                    android:text="@string/action_reset" />
-
-            <Button
-                    android:id="@+id/button_save_game"
+            <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/colorPrimary"
-                    android:text="@string/save"
-                    android:textColor="@color/buttonLabel"
-                    android:layout_margin="@dimen/big_padding"/>
+                    android:orientation="horizontal">
+                <Button
+                        android:id="@+id/bt_reset"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/medium_gap"
+                        android:text="@string/action_reset" />
+
+                <Button
+                        android:id="@+id/button_save_game"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimary"
+                        android:text="@string/save"
+                        android:textColor="@color/buttonLabel"
+                        android:layout_margin="@dimen/big_padding"/>
+            </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
