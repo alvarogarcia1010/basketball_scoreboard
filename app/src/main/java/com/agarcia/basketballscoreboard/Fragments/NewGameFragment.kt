@@ -1,6 +1,7 @@
 package com.agarcia.basketballscoreboard.Fragments
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,9 +10,11 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.Navigation
 import com.agarcia.basketballscoreboard.ViewModels.GameViewModel
 import kotlinx.android.synthetic.main.fragment_new_game.*
 import com.agarcia.basketballscoreboard.R
+import com.agarcia.basketballscoreboard.Room.Entities.Game
 import com.agarcia.basketballscoreboard.ViewModels.ScoreViewModel
 
 
@@ -38,22 +41,31 @@ class NewGameFragment : Fragment() {
         gameViewModel = ViewModelProviders.of(this).get(GameViewModel::class.java)
         scoreViewModel = ViewModelProviders.of(this).get(ScoreViewModel::class.java)
 
-        bt_reset.setOnClickListener {
-            /*
-            val book = Book(txtName.text.toString(), txtEditorial.text.toString(), 0)
+        button_save_game.setOnClickListener {
+            var winner = ""
+            if(tv_score_team_a.text.toString().toInt() > tv_score_team_b.text.toString().toInt()){
+                winner = tv_team_a.text.toString()
+            }else{
+                winner = tv_team_b.text.toString()
+            }
+
+            val game = Game(
+                tv_team_a.text.toString(),
+                tv_score_team_a.text.toString().toInt(),
+                tv_team_b.text.toString(),
+                tv_score_team_b.text.toString().toInt(),
+                tv_date.text.toString(),
+                tv_time.text.toString(),
+                winner,
+                0)
 
             try {
-                viewModel.insertBook(book)
-                //viewModel.insertBookAuthor(bookAuthor)
-                Log.d("CODIGO", "Creado con exito")
-                txtName.setText("")
-                txtEditorial.setText("")
-                Toast.makeText(view.context, "Book created!!", Toast.LENGTH_LONG).show()
+                gameViewModel.insertGame(game)
+                Navigation.findNavController(view).navigate(R.id.save_game)
+
             } catch (e: Exception){
                 Log.d("CODIGO", e.message)
             }
-            */
-            Toast.makeText(view.context, "Book created!!", Toast.LENGTH_LONG).show()
         }
 
         bt_team_a_3_p.setOnClickListener{

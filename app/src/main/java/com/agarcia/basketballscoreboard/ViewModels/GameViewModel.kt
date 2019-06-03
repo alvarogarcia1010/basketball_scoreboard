@@ -21,11 +21,11 @@ class GameViewModel(app: Application): AndroidViewModel(app) {
         allGames = gameRepository.getAllGames()
     }
 
-    fun insertBook(game: Game) = viewModelScope.launch(Dispatchers.IO){
+    fun insertGame(game: Game) = viewModelScope.launch(Dispatchers.IO){
         gameRepository.insert(game)
     }
 
-    fun updateFavorite(id: Int) = viewModelScope.launch(Dispatchers.IO){
+    fun updateSyncronizedState(id: Int) = viewModelScope.launch(Dispatchers.IO){
         gameRepository.updateSyncronizedState(id)
     }
 
