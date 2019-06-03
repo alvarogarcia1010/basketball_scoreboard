@@ -11,4 +11,8 @@
     <string name="action_free_throw">FREE THROW</string>
     <string name="text_team_b">Team B</string>
     <string name="action_reset">reset</string>
+    <string name="cancel">Cancelar</string>
+    <string name="date">Fecha</string>
+    <string name="time">Hora</string>
+    <string name="save">Guardar</string>
 </resources>

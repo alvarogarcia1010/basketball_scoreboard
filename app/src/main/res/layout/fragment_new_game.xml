@@ -6,6 +6,34 @@
               android:orientation="vertical"
               tools:context=".Fragments.NewGameFragment">
 
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="En juego..."
+            android:textStyle="bold"
+            android:textSize="@dimen/title_size"
+            android:layout_margin="@dimen/big_padding"/>
+
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_date"
+            android:text="@string/default_subtitle"
+            android:layout_gravity="center"
+            android:textSize="@dimen/subtitle_size"
+            android:layout_margin="@dimen/big_padding"/>
+
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_time"
+            android:text="15:45 pm"
+            android:layout_gravity="center"
+            android:textSize="@dimen/subtitle_size"
+            android:layout_marginBottom="@dimen/big_padding"/>
     <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -22,11 +50,13 @@
                 android:orientation="vertical">
 
             <TextView
+                    android:id="@+id/tv_team_a"
+                    android:textSize="@dimen/subtitle_size"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="@string/text_team_a"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"/>
 
             <TextView
                     android:id="@+id/tv_score_team_a"
@@ -35,7 +65,7 @@
                     android:layout_marginTop="@dimen/small_gap"
                     android:gravity="center"
                     android:text="0"
-                    android:textSize="@dimen/big_text" />
+                    android:textSize="@dimen/big_text"/>
 
 
             <Button
@@ -43,21 +73,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/small_gap"
-                    android:text="@string/action_3_points" />
+                    android:text="@string/action_3_points"/>
 
             <Button
                     android:id="@+id/bt_team_a_2_p"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/small_gap"
-                    android:text="@string/action_2_points" />
+                    android:text="@string/action_2_points"/>
 
             <Button
                     android:id="@+id/bt_team_a_free_throw"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/small_gap"
-                    android:text="@string/action_free_throw" />
+                    android:text="@string/action_free_throw"/>
 
         </LinearLayout>
 
@@ -67,7 +97,7 @@
                 android:layout_marginLeft="@dimen/medium_gap"
                 android:layout_marginTop="@dimen/medium_gap"
                 android:layout_marginRight="@dimen/medium_gap"
-                android:background="#D8D4D4" />
+                android:background="#D8D4D4"/>
 
         <LinearLayout
                 android:layout_width="0dp"
@@ -78,11 +108,13 @@
                 android:orientation="vertical">
 
             <TextView
+                    android:id="@+id/tv_team_b"
+                    android:textSize="@dimen/subtitle_size"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="@string/text_team_b"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"/>
 
             <TextView
                     android:id="@+id/tv_score_team_b"
@@ -91,28 +123,28 @@
                     android:layout_marginTop="@dimen/small_gap"
                     android:gravity="center"
                     android:text="0"
-                    android:textSize="@dimen/big_text" />
+                    android:textSize="@dimen/big_text"/>
 
             <Button
                     android:id="@+id/bt_team_b_3_p"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/small_gap"
-                    android:text="@string/action_3_points" />
+                    android:text="@string/action_3_points"/>
 
             <Button
                     android:id="@+id/bt_team_b_2_p"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/small_gap"
-                    android:text="@string/action_2_points" />
+                    android:text="@string/action_2_points"/>
 
             <Button
                     android:id="@+id/bt_team_b_free_throw"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/small_gap"
-                    android:text="@string/action_free_throw" />
+                    android:text="@string/action_free_throw"/>
 
         </LinearLayout>
 
@@ -126,5 +158,14 @@
             android:layout_marginTop="@dimen/medium_gap"
             android:layout_marginBottom="@dimen/medium_gap"
             android:text="@string/action_reset" />
+
+    <Button
+            android:id="@+id/button_save_game"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="@string/save"
+            android:textColor="@color/buttonLabel"
+            android:layout_margin="@dimen/big_padding"/>
 
 </LinearLayout>

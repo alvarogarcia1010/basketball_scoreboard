@@ -27,6 +27,13 @@ class NewGameFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        arguments?.let {
+            val safeArgs = NewGameFragmentArgs.fromBundle(it)
+            tv_date.text = safeArgs.date
+            tv_time.text = safeArgs.time
+            tv_team_a.text = safeArgs.TeamA
+            tv_team_b.text = safeArgs.TeamB
+        }
 
         gameViewModel = ViewModelProviders.of(this).get(GameViewModel::class.java)
         scoreViewModel = ViewModelProviders.of(this).get(ScoreViewModel::class.java)
