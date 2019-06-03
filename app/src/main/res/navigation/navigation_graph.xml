@@ -29,7 +29,7 @@
 
     <fragment android:id="@+id/newGameFragment"
               android:name="com.agarcia.basketballscoreboard.Fragments.NewGameFragment"
-              android:label="@string/new_game"
+              android:label="Scoreboard"
               tools:layout="@layout/fragment_new_game">
         <argument android:name="TeamA" app:argType="string"/>
         <argument android:name="TeamB" app:argType="string"/>
@@ -39,7 +39,7 @@
     </fragment>
     <fragment android:id="@+id/newGameInformationFragment"
               android:name="com.agarcia.basketballscoreboard.Fragments.NewGameInformationFragment"
-              android:label="fragment_new_game_information" tools:layout="@layout/fragment_new_game_information">
+              android:label="@string/new_game" tools:layout="@layout/fragment_new_game_information">
         <action android:id="@+id/next_action"
                 app:destination="@id/newGameFragment"/>
     </fragment>

@@ -21,20 +21,24 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
 
         val navController = Navigation.findNavController(this, R.id.nav_host_fragment)
+        setUpActionBar(navController)
 
 
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.menu_main, menu)
         return true
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         val navController = Navigation.findNavController(this, R.id.nav_host_fragment)
         val navigated = NavigationUI.onNavDestinationSelected(item!!, navController)
         return navigated || super.onOptionsItemSelected(item)
+    }
+
+    private fun setUpActionBar(navController: NavController){
+        NavigationUI.setupActionBarWithNavController(this, navController)
     }
 
 }
